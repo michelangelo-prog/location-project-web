@@ -14,6 +14,18 @@ RUN pip install -r requirements.txt
 # add app
 COPY . /usr/src/app
 
+# postgis
+RUN apt-get update -y && \
+    apt-get install --auto-remove -y \
+      binutils \
+      libproj-dev \
+      gdal-bin \
+      curl \
+      locales \
+      postgis \
+      apt-transport-https && \
+    rm -rf /var/lib/apt/lists/*
+
 EXPOSE 8000
 
 # Run the production server

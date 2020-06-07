@@ -16,12 +16,15 @@ class Common(Configuration):
         "django.contrib.sessions",
         "django.contrib.messages",
         "django.contrib.staticfiles",
+        "django.contrib.gis",
         # Third party apps
         "rest_framework",  # utilities for rest apis
         "rest_framework.authtoken",  # token authentication
         "django_filters",  # for filtering rest endpoints
-        # Your apps
+        # apps
         "location.users",
+        "location.locations",
+        "location.core",
     )
 
     # https://docs.djangoproject.com/en/2.0/topics/http/middleware/
@@ -48,10 +51,13 @@ class Common(Configuration):
     # Postgres
     DATABASES = {
         "default": dj_database_url.config(
-            default="postgres://postgres:@postgres:5432/postgres",
+            default="postgis://postgres:@postgres:5432/postgres",
             conn_max_age=int(os.getenv("POSTGRES_CONN_MAX_AGE", 600)),
         )
     }
+
+    # Postgis
+    DATABASES["default"]["ENGINE"] = "django.contrib.gis.db.backends.postgis"
 
     # General
     APPEND_SLASH = False
