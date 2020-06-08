@@ -5,6 +5,7 @@ from .exceptions import DefaultElevationApiError
 
 DEFAULT_ELEVATION_API_URL = "https://elevation-api.io/api/elevation"
 
+# TODO - refactor
 def get_elevation_from_api(location):
         parameters_to_load = {'points': "{0},{1}".format(location[1], location[0])}
 

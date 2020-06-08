@@ -15,6 +15,7 @@ import json
 
 from .exceptions import LocationExist, DefaultElevationApiError
 
+# TODO - refactor
 class CreateLocationView(CreateAPIView):
 
     http_method_names = ['post',]
@@ -43,6 +44,7 @@ class CreateLocationView(CreateAPIView):
         msg = "Location successfully created."
         return Response(msg, status=201)
 
+# TODO - refactor
 class FindLocationView(APIView):
 
     permission_classes = (IsAuthenticated,)

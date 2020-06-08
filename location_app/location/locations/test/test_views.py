@@ -9,7 +9,7 @@ from mock import patch
 
 import requests
 
-
+# TODO - refactor
 class TestLocationCreateTestCase(APITestCase):
     """
     Tests /locations create new location
