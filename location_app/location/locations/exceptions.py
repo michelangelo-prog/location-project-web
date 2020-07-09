@@ -1,6 +1,2 @@
-
-class DefaultElevationApiError(Exception):
-    pass
-
-class LocationExist(Exception):
+class LocationExists(Exception):
     pass

@@ -24,7 +24,6 @@ class Common(Configuration):
         # apps
         "location.users",
         "location.locations",
-        "location.core",
     )
 
     # https://docs.djangoproject.com/en/2.0/topics/http/middleware/
