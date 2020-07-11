@@ -60,7 +60,7 @@ class TestAdapterElevationAPI(TestCase):
         "location.locations.adapters.requests.get",
         side_effect=mocked_requests_get,
     )
-    def test_raise_ElevationApiException_when_status_code_diffrent_than_ok(self, mock_get):
+    def test_raise_ElevationApiException_when_status_code_different_than_200(self, mock_get):
         with self.assertRaises(ElevationApiException):
             self.elevation_adapter.get_elevation(2.2, -1.1)
 
@@ -68,6 +68,6 @@ class TestAdapterElevationAPI(TestCase):
         "location.locations.adapters.requests.get",
         side_effect=mocked_requests_get,
     )
-    def test_raise_ElevationApiException_when_json_data_diffrent_than_ok(self, mock_get):
+    def test_raise_ElevationApiException_when_json_data_different_than_200(self, mock_get):
         with self.assertRaises(ElevationApiException):
             self.elevation_adapter.get_elevation(TEST_LATITUDE_WRONG, TEST_LONGITUDE_WRONG)
