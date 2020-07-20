@@ -18,7 +18,7 @@ class Location(Nameable, models.Model):
         editable=False,
     )
     location = models.PointField(
-        srid=4326
+        srid=4326, unique=True
     )  # "X and Y coordinates". X is longitude, Y is latitude
     elevation = models.FloatField()
 
