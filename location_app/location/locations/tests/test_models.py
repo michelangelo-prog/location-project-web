@@ -6,6 +6,7 @@ from django.contrib.gis.geos import Point
 
 from ..factories import LocationFactory
 
+
 class TestLocationModel(TestCase):
     def setUp(self):
         self.point = Point(21.003778, 52.212667)
@@ -34,7 +35,9 @@ class TestLocationModel(TestCase):
         elevation_2 = 100.0
         point_name_2 = "Oslo"
 
-        location_2 = LocationFactory(name=point_name_2, location=point_2, elevation=elevation_2)
+        location_2 = LocationFactory(
+            name=point_name_2, location=point_2, elevation=elevation_2
+        )
 
         self.assertEquals(point_name_2, location_2.name)
         self.assertEquals(point_2, location_2.location)
