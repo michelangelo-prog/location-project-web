@@ -52,3 +52,14 @@ password | string | The user's password
     "token" : "9944b09199c62bcf9418ad846dd0e4bbdfc6ee4b"
 }
 ```
+
+## Locations
+Support adding locations and searching nearest
+
+`GET/POST` `/api/v1/locations/` - add new location / list locations
+
+`GET/PUT/PATCH/DELETE` `/api/v1/locations/:uuid/` - edit location 
+
+`GET` `/api/v1/locations/?longitude=21.02&latitude=50.86` - find closest location
+
+`GET` `/api/v1/locations/?longitude=21.02&latitude=50.86&distance=200000` - find closest locations (distance [meters])
