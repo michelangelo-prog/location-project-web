@@ -2,6 +2,7 @@ from unittest import mock
 from unittest.mock import call
 
 import factory
+from django.contrib.gis.geos import Point
 from django.db.models.query import QuerySet
 from django.test import TestCase
 
@@ -10,7 +11,7 @@ from ..models import Location
 
 EXPECTED_ELEVATION = 22.22
 
-from django.contrib.gis.geos import Point
+
 
 
 def mocked_adapter_get_elevation(*args, **kwargs):
