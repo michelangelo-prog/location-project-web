@@ -1,14 +1,12 @@
-from django.test import TestCase
-
-from ..models import Location
-
-import factory
-from ..factories import LocationFactory
-
 from unittest import mock
 from unittest.mock import call
 
+import factory
 from django.db.models.query import QuerySet
+from django.test import TestCase
+
+from ..factories import LocationFactory
+from ..models import Location
 
 EXPECTED_ELEVATION = 22.22
 

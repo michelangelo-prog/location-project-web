@@ -1,9 +1,7 @@
+from django.contrib.gis.geos import Point
 from django.test import TestCase
 
 from ..exceptions import LocationExists
-
-from django.contrib.gis.geos import Point
-
 from ..factories import LocationFactory
 
 

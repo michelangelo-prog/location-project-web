@@ -1,9 +1,9 @@
 import uuid as uuid_lib
-from .behaviors import Nameable
+
 from django.contrib.gis.db import models
 
+from .behaviors import Nameable
 from .exceptions import LocationExists
-
 from .managers import LocationManager
 
 

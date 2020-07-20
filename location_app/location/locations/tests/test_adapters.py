@@ -1,7 +1,7 @@
-from ..adapters import AdapterElevationAPI, HTTP_200_OK, ElevationApiException
-
 from unittest import TestCase, mock
 from unittest.mock import call
+
+from ..adapters import HTTP_200_OK, AdapterElevationAPI, ElevationApiException
 
 TEST_LATITUDE = 39.90974
 TEST_LONGITUDE = -106.17188

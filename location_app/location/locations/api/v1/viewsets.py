@@ -1,16 +1,10 @@
-from rest_framework import viewsets, mixins
-
+from rest_framework import mixins, status, viewsets
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
-from .serializers import LocationSerializer
-from rest_framework import status
-from ...models import Location
-
 from ...exceptions import LocationExists
-
-from .serializers import ClosestLocationSerializer
-
+from ...models import Location
+from .serializers import ClosestLocationSerializer, LocationSerializer
 
 MESSAGE_INCORRECT_PARAMETERS = "Incorrect parameters were provided."
 

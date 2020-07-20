@@ -1,12 +1,9 @@
 import random
 
+from django.contrib.gis.geos import Point
 from factory import Sequence
 from factory.django import DjangoModelFactory
-from factory.fuzzy import FuzzyFloat
-
-from factory.fuzzy import BaseFuzzyAttribute
-
-from django.contrib.gis.geos import Point
+from factory.fuzzy import BaseFuzzyAttribute, FuzzyFloat
 
 from .models import Location
 

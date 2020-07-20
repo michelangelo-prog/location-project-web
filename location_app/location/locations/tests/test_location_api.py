@@ -1,17 +1,12 @@
+from unittest import mock
+
+import factory
+from location.users.tests.factories import UserFactory
+from rest_framework import status
 from rest_framework.test import APITestCase
 
 from ..factories import LocationFactory
-
-from rest_framework import status
-
-import factory
-
-from unittest import mock
-
 from ..models import Location
-
-from location.users.tests.factories import UserFactory
-
 
 EXPECTED_ELEVATION = 22.22
 
