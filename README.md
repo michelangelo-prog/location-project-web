@@ -13,6 +13,17 @@ Run a command inside the docker container:
 docker-compose run --rm web [command]
 ```
 
+## Locations
+Support adding locations and searching nearest
+
+`GET/POST` `/api/v1/locations/` - add new location / list locations
+
+`GET/PUT/PATCH/DELETE` `/api/v1/locations/:uuid/` - edit location 
+
+`GET` `/api/v1/locations/?longitude=21.02&latitude=50.86` - find closest location
+
+`GET` `/api/v1/locations/?longitude=21.02&latitude=50.86&distance=200000` - find closest locations (distance [meter])
+
 ## Authentication
 For clients to authenticate, the token key should be included in the Authorization HTTP header. The key should be prefixed by the string literal "Token", with whitespace separating the two strings. For example:
 
@@ -52,14 +63,3 @@ password | string | The user's password
     "token" : "9944b09199c62bcf9418ad846dd0e4bbdfc6ee4b"
 }
 ```
-
-## Locations
-Support adding locations and searching nearest
-
-`GET/POST` `/api/v1/locations/` - add new location / list locations
-
-`GET/PUT/PATCH/DELETE` `/api/v1/locations/:uuid/` - edit location 
-
-`GET` `/api/v1/locations/?longitude=21.02&latitude=50.86` - find closest location
-
-`GET` `/api/v1/locations/?longitude=21.02&latitude=50.86&distance=200000` - find closest locations (distance [meters])
